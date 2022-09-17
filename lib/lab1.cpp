@@ -22,6 +22,7 @@ ll modularExponentiation(ll x, ll y, ll p) {
 	return a;
 }
 
+//ax + by = gcd(a, b)
 ll* eucleadian(ll a, ll b) {
 	ll static u[]{a, 1, 0}, v[]{b, 0, 1}, t[]{0, 0, 0};
 	ll q = 0;
@@ -101,30 +102,29 @@ ll diffieHellman() {
 	return g;
 }
 
+//y = a^x mod p
 ll babyGiantStep(ll a, ll y, ll p) {
-	//mk > p
 	ll m = 0, k = 0;
-	m = (int)sqrt(p + .0) + 1;  k = m;
+	m = (int)sqrt(p) + 1;  k = m;
 	map<ll,int> b;
 
 	for (int i = 0; i < m; i++) {
 		ll tmp = modularExponentiation(a, i, p) * y % p;
-		//if (!b.count(tmp)) {
+		if (!b.count(tmp)) {
 			b[tmp] = i;
-		//}
-		cout << modularExponentiation(a, i, p) * y % p << " ";
+		}
+		//cout << modularExponentiation(a, i, p) * y % p << " ";
 	}
-	cout << endl;
+	//cout << endl;
 	for (int i = 1; i <= k; i++) {
 		ll tmp = modularExponentiation(a, (m * i), p);
-		cout << tmp << " ";
+		//cout << tmp << " ";
 		if (b.count(tmp))
 		{
-			cout << endl;
+			//cout << endl;
 			return i * m - b[tmp];
 		}
 	}
-	cout << endl;
 	return -1;
 }
 
@@ -135,7 +135,7 @@ int main() {
 	cout << "gcd = " << answer[0] << "; x = " << answer[1] << "; y = " << answer[2] << endl;
 	cout << isPrime(2147483647, 100) << endl;
 	cout << isPrime(67217, 100) << endl;
-	cout << simpleNumberRandom(1, 10 << 22) << endl;
+	//cout << simpleNumberRandom(1, 10 << 22) << endl;
 	cout << diffieHellman() << endl;
-	cout << endl << babyGiantStep(17, 438, 509) << endl;
+	cout << endl << babyGiantStep(2, 1, 1000000007) << endl;
 }
