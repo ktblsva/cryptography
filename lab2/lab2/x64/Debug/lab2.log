@@ -1,0 +1,30 @@
+﻿  lab2.cpp
+C:\repro\lab2\lab2\lab2.cpp(89,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\repro\lab2\lab2\lab2.cpp(228,26): warning C4244: аргумент: преобразование "__int64" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=unsigned char
+          ]
+C:\repro\lab2\lab2\lab2.cpp(293,69): warning C4244: аргумент: преобразование "__int64" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=unsigned char
+          ]
+C:\repro\lab2\lab2\lab2.cpp(342,47): warning C4244: аргумент: преобразование "__int64" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=unsigned char
+          ]
+C:\repro\lab2\lab2\lab2.cpp(350,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\repro\lab2\lab2\lab2.cpp(353,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\repro\lab2\lab2\lab2.cpp(390,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\repro\lab2\lab2\lab2.cpp(391,34): warning C4244: аргумент: преобразование "_Ty" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=__int64
+          ]
+          and
+          [
+              _Ty=unsigned char
+          ]
+  lab2.vcxproj -> C:\repro\lab2\x64\Debug\lab2.exe
